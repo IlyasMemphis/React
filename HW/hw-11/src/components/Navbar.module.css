@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: #007bff;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list { 
+    list-style-type: none;
+    padding: 0;
+}
+
+.link.active {
+    text-decoration: underline;
+}
