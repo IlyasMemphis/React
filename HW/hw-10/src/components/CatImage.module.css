@@ -1,0 +1,28 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 80px;
+  }
+  
+  .button:hover {
+    background-color: #ff4500;
+  }
+  
