@@ -1,0 +1,22 @@
+.app {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 50px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.value-display { 
+  motion-path: 20px;
+}
+
+.value-display p {
+  font-size: 18px;
+}
