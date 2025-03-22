@@ -1,51 +1,44 @@
 import React from "react";
-import { useForm } from "react-hook-form"
-import styles from './DynamicForm.module.css'
+import { useForm } from "react-hook-form";
+import styles from "./DynamicForm.module.css";
 
 const DynamicForm = () => {
-    const { 
-        register, 
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Форма отправлена:", data);
-    }
+  const firstFieldValue = watch("firstField", "");
 
-    const firstInputValue = watch("firstInput", "")
+  const onSubmit = (data) => {
+    console.log("Form Data:", data);
+  };
 
-    return (
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer}>
-            <div className={styles.formGroup}>
-                <label>Первое поле ввода:</label>
-                <input type="text"
-                {...register("firstInput", { required: true, minLenght: 3 })}
-                className={styles.inputField}
-                />
-                {errors.firstInput && (
-                    <span className={styles.errorMessage}>
-                        Минимальная длина - 3 символа
-                    </span>
-                )}
-            </div>
-            {firstInputValue.lenght >= 3 && (
-                <div className={styles.formGroup}>
-                    <label>Второе поле ввода:</label>
-                    <input 
-                    type="text" 
-                    {...register("secondInput", { required: true })}
-                    className={styles.inputField}
-                    />
-                    {errors.secondInput && (
-                        <span className={styles.errorMessage}>Это поле обязательно</span>
-                    )}
-                </div>
-            )}
-            <button type="submit" className={styles.submitButton}>Отправить</button>
-        </form>
-    )
-}
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <label className={styles.label}>First Field</label>
+      <input
+        {...register("firstField", { required: true, minLength: 6 })}
+        className={styles.input}
+      />
+      {errors.firstField && (
+        <p className={styles.error}>Minimum 6 characters required</p>
+      )}
 
-export default DynamicForm
+      {firstFieldValue.length >= 6 && (
+        <>
+          <label className={styles.label}>Second Field</label>
+          <input {...register("secondField")} className={styles.input} />
+        </>
+      )}
+
+      <button type="submit" className={styles.button}>
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default DynamicForm;

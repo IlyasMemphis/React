@@ -1,23 +1,13 @@
 import React from "react";
 import DynamicForm from "./components/DynamicForm";
 
-function App() {
-  return ( 
+const App = () => {
+  return (
     <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <h1>Dynamic Form</h1>
       <DynamicForm />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
