@@ -1,26 +1,28 @@
-import React from 'react';
-import styles from "../Contacts.module.css";
-import snapchatLogo from '../../src/assets/snapchat-logo.svg';
-import facebookLogo from '../assets/Facebook-f_Logo-Blue-Logo.wine.svg';
-import xLogo from '../assets/x-2.svg';
+import React from "react";
+import styles from "../styles/Contacts.module.css";
+import snapchatLogo from "../assets/snapchat-logo.svg";
+import facebookLogo from "../assets/Facebook-f_Logo-Blue-Logo.wine.svg";
+import xLogo from "../assets/x-2.svg";
 
 const Contacts = () => {
   return (
-    <section className={styles.contactsSection}>
+    <section className={styles.contacts}>
       <div className={styles.contactInfo}>
         <h1>Контакты</h1>
         <ul>
-          <li>8.800.000.00.00</li>
-          <li>emailiosample@gmail.com</li>
+          <li>Телефон: +7 (123) 456-78-90</li>
+          <li>Email: example@email.com</li>
         </ul>
+
         <form className={styles.contactForm}>
-          <input type="email" placeholder="Введите ваш email" required />
-          <input type="text" placeholder="Введите ваше имя" required />
-          <textarea placeholder="Введите сообщение" required />
+          <input type="email" placeholder="Ваша почта" required />
+          <input type="text" placeholder="Ваше имя" required />
+          <textarea placeholder="Ваше сообщение" required></textarea>
           <button type="submit">Отправить</button>
         </form>
       </div>
-      <div className={styles.socialLinks}>
+
+      <div className={styles.socials}>
         <p>Найдите нас на:</p>
         <a href="https://snapchat.com" target="_blank" rel="noopener noreferrer">
           <img src={snapchatLogo} alt="Snapchat" />
@@ -28,7 +30,7 @@ const Contacts = () => {
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <img src={facebookLogo} alt="Facebook" />
         </a>
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <img src={xLogo} alt="X" />
         </a>
       </div>

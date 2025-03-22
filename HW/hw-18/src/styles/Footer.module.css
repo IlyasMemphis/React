@@ -1,0 +1,40 @@
+.footer {
+    background-color: #282c34;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Это заставит футер "отталкиваться" вниз */
+  }
+  
+  .footerContent {
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footerNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footerNav li {
+    margin-left: 20px;
+  }
+  
+  .footerNav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footerNav a:hover {
+    color: #61dafb;
+  }
+  

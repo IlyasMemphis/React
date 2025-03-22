@@ -1,0 +1,69 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contactInfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactInfo li {
+  margin-bottom: 5px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactForm button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  margin: 5px;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}

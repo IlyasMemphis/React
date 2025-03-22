@@ -1,19 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Contacts from './components/Contacts';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Contacts from "./components/Contacts";
+import styles from "./App.module.css"
 
-function App() {
+const App = () => {
   return (
     <Router>
+      <Header />
       <Routes>
-        {/* Маршрут для корневого пути */}
-        <Route path="/" element={<Navigate to="/contacts" />} />
-        
-        {/* Маршрут для страницы контактов */}
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
+      <Footer />
     </Router>
   );
-}
+};
 
 export default App;
